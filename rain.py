@@ -7,10 +7,8 @@ class Rain(Sprite):
         """Create a bullet at the ship's current position"""
         super().__init__()
         self.screen = screen
-        self.surf = pygame.Surface((20, 20))
+        self.rect = pygame.Rect(0, 0, 5, 5)
         #create a bullet rect at(0,0) and then set correct position
-        self.surf.fill((100, 100, 100))
-        self.rect = self.surf.get_rect(center=(820, 800))
         self.rect.center = (rect_x, rect_bottom)
         #store the bullet's position as a decimal value.
         self.y = float(self.rect.y)
